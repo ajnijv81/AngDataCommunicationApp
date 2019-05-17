@@ -1,0 +1,15 @@
+<div class="container">
+<div class = "row">
+  <div class="col-4">
+    <label>My name is :</label>
+    <input type="text" #textbox id="parentname" name="parentname" />
+    <input type="button" (click)="toggleChild(textbox.value)" value="Click" />
+  </div>
+  <!-- <div *ngFor = "let parent of parents">
+     {{parent.name}}
+  </div> -->
+  <div class="col-4" *ngIf = "this.show">
+    <app-child [parentName] = "name"></app-child>
+  </div>
+</div>
+</div>

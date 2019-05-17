@@ -1,0 +1,9 @@
+<div>
+  <label>I am a Child.My parent is {{parentName}}</label>
+  <div>
+  <label>From Service:{{serParent}}</label>
+</div>
+</div>
+<div>
+  <app-grandchild *ngIf="parent" [grandParentName] = "parent"></app-grandchild>
+</div>
